@@ -11,3 +11,22 @@ if (windowInnerWidth < 1030) {
     });
   });
 }
+
+const textarea = document.querySelector('.feedback__input-textarea');
+let marginTop = 70;
+const addMargin = (num) => {
+  textarea.style.marginTop = marginTop + 'px';
+};
+
+addMargin(marginTop);
+
+textarea.addEventListener('keyup', function() {
+  if (this.scrollTop > 0) {
+    this.style.height = this.scrollHeight + 5 + 'px';
+
+    if (marginTop > 0) {
+      marginTop -= 5;
+      addMargin(marginTop);
+    }
+  }
+});

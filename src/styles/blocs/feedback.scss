@@ -8,9 +8,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    & > :nth-child(5) {
-      margin-top: 70px;
-    }
   }
 
   &__title {
@@ -25,6 +22,12 @@
     border: none;
     border-bottom: 1px solid rgba($color: $secondary-color, $alpha: 0.5);
     opacity: 0.5;
+  }
+
+  &__input-textarea {
+    height: 25px;
+    // margin-top: 70px;
+    resize: none;
   }
 
   &__btn {
